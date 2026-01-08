@@ -6,7 +6,7 @@
 /*   By: fdeville <fdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 16:23:18 by fdeville          #+#    #+#             */
-/*   Updated: 2026/01/08 03:35:41 by fdeville         ###   ########.fr       */
+/*   Updated: 2026/01/08 04:32:00 by fdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ static int	ft_print_format(char c, va_list *args)
 	else if (c == 'u')
 		written += ft_putnbr_unsigned(va_arg(*args, unsigned int));
 	else if (c == 'x')
-		written += ft_putnbr_base(va_arg(*args, int), "0123456789abcdef");
+		written += ft_putnbr_base_u(va_arg(*args, int), "0123456789abcdef");
 	else if (c == 'X')
-		written += ft_putnbr_base(va_arg(*args, int), "0123456789ABCDEF");
+		written += ft_putnbr_base_u(va_arg(*args, int), "0123456789ABCDEF");
 	return (written);
 }
 

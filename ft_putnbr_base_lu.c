@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr_base_lu.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdeville <fdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/12 12:47:53 by fdeville          #+#    #+#             */
-/*   Updated: 2026/01/08 03:36:10 by fdeville         ###   ########.fr       */
+/*   Updated: 2026/01/08 04:17:40 by fdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ static int	valid_base(char *base)
 	return (1);
 }
 
-int	ft_putnbr_base(unsigned int nbr, char *base)
+int	ft_putnbr_base_u(unsigned int nbr, char *base)
 {
 	unsigned int	base_l;
 	int				written;
@@ -77,7 +77,7 @@ int	ft_putnbr_base(unsigned int nbr, char *base)
 	if (base_l > 0)
 	{
 		if (nbr > base_l - 1)
-			written += ft_putnbr_base(nbr / base_l, base);
+			written += ft_putnbr_base_u(nbr / base_l, base);
 		written += write(1, &base[nbr % base_l], 1);
 	}
 	return (written);
