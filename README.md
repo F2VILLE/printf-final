@@ -23,4 +23,5 @@ StackOverflow to debug problems I encountered.
 
 # Explanation of chosen algorithm and data structure
 
-???
+To make this project, I simply iterate through each character of the given string and call a function that will do the wanted behavior of the char following the trigger ('%') char.
+To keep track of the number of char written, each function (putnbr, putstr, putptr, etc) returns the number of char wrote using the function write.

@@ -6,7 +6,7 @@
 /*   By: fdeville <fdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 16:23:18 by fdeville          #+#    #+#             */
-/*   Updated: 2026/01/08 04:32:00 by fdeville         ###   ########.fr       */
+/*   Updated: 2026/01/09 10:33:53 by fdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,4 +91,28 @@ int	main(void)
 	ft_printf("ft_printf returned : %d\nprintf returned : %d\n\n", a, b);
 
 	return (0);
-}*/
+}
+// #include "ft_printf.h"
+// #include <limits.h>
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     int          a = 42;
+//     unsigned int b = 19;
+// 	int			imax = INT_MAX;
+//     char        str[] = "This is a str";
+
+// 	int	r = printf("===== START =====\n%s\n%% this escapes the %% char\n
+a = %d\n(%%i) a = %i\n(unsigned) b = %u\n\n&a = %p\n\n(hex) a = %x\n\n
+(HEX) b = %X\n\nimax = %d\n\nNull pointer = %p\n\n====== END ======\n", 
+// 		str, a,a, b, &a, a, b, imax, NULL);
+//     int ft_r = ft_printf("===== START =====\n%s\n%% this escapes the %% char\n
+a = %d\n(%%i) a = %i\n(unsigned) b = %u\n\n&a = %p\n\n(hex) a = %x\n\n
+(HEX) b = %X\n\nimax = %d\n\nNull pointer = %p\n\n====== END ======\n", 
+// 		str, a,a, b, &a, a, b, imax, NULL);
+// 	printf("printf returned %d\n\nft_printf returned %d", r, ft_r);
+// 	return (0);
+// }	
+
+*/
