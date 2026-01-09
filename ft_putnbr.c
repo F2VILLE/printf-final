@@ -6,11 +6,10 @@
 /*   By: fdeville <fdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/13 04:41:20 by fdeville          #+#    #+#             */
-/*   Updated: 2026/01/08 04:21:54 by fdeville         ###   ########.fr       */
+/*   Updated: 2026/01/09 15:09:24 by fdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <limits.h>
 #include "ft_printf.h"
 
 int	ft_putnbr(int n)

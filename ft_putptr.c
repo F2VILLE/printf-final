@@ -6,12 +6,11 @@
 /*   By: fdeville <fdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 17:19:03 by fdeville          #+#    #+#             */
-/*   Updated: 2026/01/08 04:26:01 by fdeville         ###   ########.fr       */
+/*   Updated: 2026/01/09 15:09:12 by fdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <unistd.h>
 
 int	ft_putptr(void *ptr)
 {

@@ -6,12 +6,10 @@
 /*   By: fdeville <fdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 16:23:18 by fdeville          #+#    #+#             */
-/*   Updated: 2026/01/09 10:33:53 by fdeville         ###   ########.fr       */
+/*   Updated: 2026/01/09 15:19:11 by fdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdarg.h>
 #include "ft_printf.h"
 
 static int	ft_print_format(char c, va_list *args)
@@ -35,7 +33,18 @@ static int	ft_print_format(char c, va_list *args)
 		written += ft_putnbr_base_u(va_arg(*args, int), "0123456789abcdef");
 	else if (c == 'X')
 		written += ft_putnbr_base_u(va_arg(*args, int), "0123456789ABCDEF");
+	else
+		written += ft_putchar('%');
 	return (written);
+}
+
+static int	ft_valid_format(const char *format)
+{
+	if (!format)
+		return (0);
+	if (format[0] == '%' && !format[1])
+		return (0);
+	return (1);
 }
 
 int	ft_printf(const char *format, ...)
@@ -44,6 +53,8 @@ int	ft_printf(const char *format, ...)
 	int		i;
 	int		written;
 
+	if (!ft_valid_format(format))
+		return (-1);
 	va_start(args, format);
 	i = 0;
 	written = 0;

@@ -6,7 +6,7 @@
 /*   By: fdeville <fdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 02:35:05 by fdeville          #+#    #+#             */
-/*   Updated: 2026/01/08 04:25:39 by fdeville         ###   ########.fr       */
+/*   Updated: 2026/01/09 15:14:10 by fdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 # define FT_PRINTF_H
 
 # include <stddef.h>
+# include <unistd.h>
+# include <limits.h>
+# include <stdlib.h>
+# include <stdarg.h>
 
 int	ft_putnbr(int n);
 int	ft_putchar(int c);

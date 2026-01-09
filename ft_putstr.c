@@ -6,7 +6,7 @@
 /*   By: fdeville <fdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 16:49:16 by fdeville          #+#    #+#             */
-/*   Updated: 2025/11/29 20:45:30 by fdeville         ###   ########.fr       */
+/*   Updated: 2026/01/09 15:08:55 by fdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@ int	ft_putstr(char *s)
 	int	i;
 	int	written;
 
+	if (!s)
+	{
+		return (write(1, "(null)", 6));
+	}
 	i = 0;
 	written = 0;
 	while (s[i])
