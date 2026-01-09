@@ -14,7 +14,10 @@ To build the project, use the Makefile :
 ```
 make all
 ```
-This command will build the current project with the libft folder and output a `libftprintf.a` library that can then be included in a project using gcc.
+This command will build the current project with the libft folder and output a `libftprintf.a` file that can then be included in a project using gcc :
+```
+gcc test.c libftprintf.a -o test
+```
 
 ## Resources
 
